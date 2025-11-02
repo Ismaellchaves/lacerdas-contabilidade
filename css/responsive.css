@@ -201,3 +201,17 @@
     }
   }
 }
+
+
+
+
+/*configuração responsiva Imagens*/
+
+.slideshow-container,
+.mySlides,
+.mySlides picture,
+.mySlides img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
