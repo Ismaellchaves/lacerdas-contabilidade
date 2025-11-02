@@ -399,3 +399,21 @@ footer a {
 }
 
 
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+
+/* Esconde as imagens por padrão */
+.mySlides {
+  display: none;
+}
+
+/* Imagens responsivas */
+.mySlides img {
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
