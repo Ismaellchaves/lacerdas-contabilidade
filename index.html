@@ -35,30 +35,36 @@
   </header>
   
 
-  <main>
-    <div id="home" class="slideshow-container">
-      <div class="mySlides fade">
-        <picture>
-          <source  srcset="assets/banner-mobile1.jpg" media="(max-width: 400px)">
-          <source srcset="assets/banner2.jpg">
-          <img src="assets/banner1.jpg" width="100%">
-        </picture>
-      </div>
-      <div class="mySlides fade">
-        <picture>
-          <source srcset="assets/banner-mobile2.jpg" media="(max-width: 400px)">
-          <source srcset="assets/banner3.jpg">
-          <img src="assets/banner2.jpg" width="100%">
-        </picture>
-      </div>
-      <div class="mySlides fade">
-        <picture>
-          <source srcset="assets/banner-mobile3.jpg" media="(max-width: 400px)">
-          <source srcset="assets/banner1.jpg">
-          <img src="assets/banner3.jpg" width="100%">
-        </picture>
-      </div>
+<main>
+  <div id="home" class="slideshow-container">
+    <div class="mySlides fade">
+      <picture>
+        <!-- Mobile: até 767px de largura -->
+        <source srcset="assets/banner-mobile1.jpg" media="(max-width: 767px)">
+        <!-- Tablet/Desktop -->
+        <source srcset="assets/banner2.jpg">
+        <img src="assets/banner1.jpg" alt="Banner 1" style="width:100%; height:auto;">
+      </picture>
     </div>
+
+    <div class="mySlides fade">
+      <picture>
+        <source srcset="assets/banner-mobile2.jpg" media="(max-width: 767px)">
+        <source srcset="assets/banner3.jpg">
+        <img src="assets/banner2.jpg" alt="Banner 2" style="width:100%; height:auto;">
+      </picture>
+    </div>
+
+    <div class="mySlides fade">
+      <picture>
+        <source srcset="assets/banner-mobile3.jpg" media="(max-width: 767px)">
+        <source srcset="assets/banner1.jpg">
+        <img src="assets/banner3.jpg" alt="Banner 3" style="width:100%; height:auto;">
+      </picture>
+    </div>
+  </div>
+</main>
+
 
   <!-- buttons next sliders 
   <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
