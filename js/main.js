@@ -1,28 +1,28 @@
 let slideIndex = 0;
 showSlides();
 
-
 function showSlides() {
   let i;
   let slides = document.getElementsByClassName("mySlides");
+  
+  // Esconde todos os slides
   for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
+    slides[i].style.display = "none";  
   }
+  
+  // Avança para o próximo slide
   slideIndex++;
-  if (slideIndex > slides.length) { slideIndex = 1 }
-  slides[slideIndex - 1].style.display = "block";
-  setTimeout(showSlides, 5500); // Tempo de troca dos sliders
-}
-
-
-//Evento de Scroll
-window.onscroll = function () {
-  myScrolll();
-}
-
-function myScrolll() {
-  var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-  var height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-  var scrolled = (winScroll / height) * 100;
-  document.getElementById("myBar").style.width = scrolled + "%";
+  
+  // Volta para o primeiro slide se chegou ao final
+  if (slideIndex > slides.length) {
+    slideIndex = 1;
+  }
+  
+  // Mostra o slide atual
+  if (slides[slideIndex-1]) {
+    slides[slideIndex-1].style.display = "block";
+  }
+  
+  // Muda a cada 4 segundos
+  setTimeout(showSlides, 4000);
 }
