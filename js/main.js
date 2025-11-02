@@ -1,28 +1,22 @@
-let slideIndex = 0;
-showSlides();
+document.addEventListener('DOMContentLoaded', function() {
+  let currentSlide = 0;
+  const slides = document.querySelectorAll('.mySlides');
+  const totalSlides = slides.length;
 
-function showSlides() {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  
-  // Esconde todos os slides
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
+  function showSlide() {
+    // Esconde todos os slides
+    slides.forEach(slide => {
+      slide.style.display = 'none';
+    });
+    
+    // Mostra o slide atual
+    slides[currentSlide].style.display = 'block';
+    
+    // Avança para o próximo slide
+    currentSlide = (currentSlide + 1) % totalSlides;
   }
-  
-  // Avança para o próximo slide
-  slideIndex++;
-  
-  // Volta para o primeiro slide se chegou ao final
-  if (slideIndex > slides.length) {
-    slideIndex = 1;
-  }
-  
-  // Mostra o slide atual
-  if (slides[slideIndex-1]) {
-    slides[slideIndex-1].style.display = "block";
-  }
-  
-  // Muda a cada 4 segundos
-  setTimeout(showSlides, 4000);
-}
+
+  // Inicia o slideshow
+  showSlide();
+  setInterval(showSlide, 4000);
+});
