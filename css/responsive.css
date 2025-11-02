@@ -1,0 +1,203 @@
+/*dispositivo acima de 700px de largura*/
+@media screen and (min-width: 850px) {
+  .nav-toggle-label {
+    display: none;
+  }
+
+  header {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  nav {
+    all: unset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1.25rem;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  nav a {
+    opacity: 1;
+    position: relative;
+  }
+
+  nav a.active::before {
+    transform: none;
+    opacity: 0;
+  }
+
+  nav a.active {
+    color: var(--color-branco);
+    padding: 0.70rem 1.2rem;
+    border-radius: 3.437rem;
+    background-color: var(--color-pink);
+    transition: 0.4s;
+    box-shadow: 1px 1px 12px rgba(0, 0, 0, 0.349);
+  }
+
+  nav a.active:hover {
+    background-color: var(--color-azul);
+  }
+
+  nav a::before {
+    content: '';
+    height: 0.187rem;
+    display: block;
+    background-color: var(--color-azul);
+    position: absolute;
+    top: 1.3rem;
+    left: 0;
+    right: 0;
+    transform: scale(0, 1);
+    transition: transform ease-in-out 250ms;
+  }
+
+  nav a:hover::before {
+    transform: scale(1, 1);
+  }
+
+  /*Seção Sliders*/
+  .slideshow-container {
+    position: relative;
+    margin: auto;
+  }
+
+
+  .mySlides {
+    display: none;
+  }
+
+  /*
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 35%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+
+  
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  button next end prev 
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  */
+
+  /*Animação sliders */
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+
+  @keyframes fade {
+    from {
+      opacity: .4
+    }
+
+    to {
+      opacity: 1
+    }
+  }
+
+  /*configuração da seção cards*/
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }  
+
+  .col {
+    float: left;
+    width: 25%;
+    padding: 0px 0.625rem;
+  }
+
+  .card {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+  }
+
+  /*seção cards áreas de atuação*/
+  .col-atuacao {
+    float: left;
+    width: 33%;
+  }
+
+  .col-post {
+    float: left;
+    width: 66%;
+  }
+
+  .card-atuacao {
+    margin: 0.75rem;
+  }
+
+  .atuacao h2, .conteudo h2, .newsletter h2{
+    font-size: 3rem;
+  }
+
+  /*seção formulario*/
+  .form {
+    padding: 3rem 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+  }
+
+  .form h3 {
+    font-size: 2.2rem;
+  }
+
+  .myForm {
+    width: 25rem;
+  }
+
+  /*seção footer*/
+  footer h4 {
+    padding-top: 0.4rem;
+  }
+
+  footer a img {
+    text-align: center;
+  }  
+}
+
+@media screen and (max-width: 400px) {
+  .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+
+  @keyframes fade {
+    from {
+      opacity: .4
+    }
+
+    to {
+      opacity: 1
+    }
+  }
+}
