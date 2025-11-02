@@ -404,11 +404,18 @@ footer a {
   max-width: 100%;
   position: relative;
   margin: auto;
+  overflow: hidden;
 }
 
-/* Esconde as imagens por padrão */
+/* Mostra apenas o slide ativo */
 .mySlides {
   display: none;
+  width: 100%;
+}
+
+/* Mostra o primeiro slide por padrão */
+.mySlides:first-child {
+  display: block;
 }
 
 /* Imagens responsivas */
